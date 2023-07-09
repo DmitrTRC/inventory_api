@@ -42,7 +42,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'inventory_api.urls'
-print('base dir before TEMPL: ', BASE_DIR)
+
+if DEBUG:
+    print('base dir before TEMPL: ', BASE_DIR)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
