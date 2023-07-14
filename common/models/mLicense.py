@@ -7,7 +7,6 @@ class License(models.Model):
     start_date = models.DateField(blank=True, null=True)
     photo = models.ImageField(upload_to='license_photos', blank=True)
     is_active = models.BooleanField(default=True)
-    weapon_item = models.ForeignKey('WeaponItem', on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.license_number
